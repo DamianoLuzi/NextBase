@@ -22,6 +22,7 @@
     "stripe": "11.16.0"
   },
   "devDependencies": {
+    "@types/react": "18.2.38",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4"
   }
