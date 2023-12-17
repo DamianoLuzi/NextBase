@@ -44,10 +44,3 @@
 - [Supabase Database Functions](https://supabase.com/docs/guides/database/functions)
 - [Supabase Database Triggers](https://supabase.com/docs/guides/auth/managing-user-data#using-triggers)
 
-## Additional Info
-
-- The logo font is "Bakbak One", a free Google font
-- All the images are included in the /assets folder in /public
-- Along with each image is its original .psd (Photoshop) file
-- Seed product data using the Supabase SQL editor from the seed.sql file (in this project)
-- Use VSCode to instantly install the recommended extensions for this project (listed in the .vscode folder in this project)
