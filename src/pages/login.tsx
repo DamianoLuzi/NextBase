@@ -13,10 +13,10 @@ export default function LoginPage() {
           <div className="border-right bg-offwhite">
             <div className="column-padding">
               <div className="tablet-centered"> 
-                <Link href='' className="logo-container">
+                <Link href='/' className="logo-container">
                   <Logo style={{width: 150 }}/>
-                  {submitted? <LoginSubmitted submitted={submitted}/> : <LoginForm setSubmitted={setSubmitted}/>}
                 </Link>
+                  {submitted? <LoginSubmitted submitted={submitted}/> : <LoginForm setSubmitted={setSubmitted}/>} 
               </div>
             </div>
           </div>
