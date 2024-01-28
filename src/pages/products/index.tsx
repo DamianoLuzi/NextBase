@@ -1,5 +1,5 @@
 import React from "react";
-import { supabase } from "../../../supabase";
+import supabase from "../../../supabase";
 import ProductCard from "../../products/components/Card";
 import Product from "../../types/Product";
 

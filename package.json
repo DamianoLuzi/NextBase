@@ -12,18 +12,23 @@
     "@stripe/stripe-js": "1.52.0",
     "@supabase/auth-helpers-nextjs": "0.5.6",
     "@supabase/auth-helpers-react": "0.3.1",
-    "@supabase/supabase-js": "2.12.1",
-    "next": "13.2.4",
+    "@supabase/supabase-js": "^2.39.3",
+    "next": "^13.5.6",
     "raw-body": "2.5.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-player": "2.12.0",
-    "sharp": "0.32.0",
+    "sharp": "^0.32.6",
     "stripe": "11.16.0"
   },
   "devDependencies": {
     "@types/react": "18.2.38",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4"
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
   }
 }

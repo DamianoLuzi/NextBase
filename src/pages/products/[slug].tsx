@@ -1,8 +1,9 @@
 import React from "react";
-import { supabase } from "../../../supabase";
 import Image from "next/image";
 import PromoCard from "../../products/components/PromoCard";
 import Product from "../../types/Product";
+import supabase from "../../../supabase/index"
+
 
 interface ProductPageProps {
   product : Product;
