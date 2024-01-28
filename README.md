@@ -1,4 +1,4 @@
-# Build a SaaS app with React
+# SaaS application with React
 
 ## Technologies Used
 
@@ -7,16 +7,7 @@
 ## Tools Needed
 
 - [Node / NPM (Package Manager)](https://nodejs.org/)
-- [VSCode (Code Editor)](https://code.visualstudio.com/)
-- [Git / Github](https://git-scm.com/)
-
-## Accounts Needed (100% Free)
-
-- [Supabase (Backend)](https://supabase.com)
-- [Stripe (Payments)](https://stripe.com)
-- [Vercel (Deployment)](https://vercel.com)
-- [Github (Continuous Deployment)](https://github.com)
-
+  
 ## Next.js Documentation
 
 - [Next.js Image](https://nextjs.org/docs/api-reference/next/image)
