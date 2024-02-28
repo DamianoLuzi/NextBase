@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
       initialSession={pageProps.initialSession}
     >
       <AppLayout>
-        <Component {...pageProps}/>
+        <Component {...pageProps} />
       </AppLayout>
     </SessionContextProvider>
   );

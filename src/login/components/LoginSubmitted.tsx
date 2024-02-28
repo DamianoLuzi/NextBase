@@ -1,6 +1,6 @@
-export default function LoginSubmitted({submitted}) {
-	return(
-	  <div className="content-grid home-hero">
+export default function LoginSubmitted({ submitted }) {
+	return (
+		<div className="content-grid home-hero">
 			<h1>Link sent!</h1>
 			<p>Check your email ({submitted}) to finish logging in</p>
 		</div>
