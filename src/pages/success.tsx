@@ -14,7 +14,7 @@ export default function SuccessPage() {
             alt= "confetti"
             className = "confetti"
           />
-          <h1>You're In!</h1>
+          <h1>You&apos;re In!</h1>
           <p>You can now access everything on this site. <br/>Ready to get started? </p>
           <Link href="/" className="large-button">
             <div className="large-button-text">
