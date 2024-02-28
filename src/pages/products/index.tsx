@@ -9,7 +9,7 @@ interface ProductsPageProps {
 
 const ProductsPage = ({ products }: ProductsPageProps) => {
   //console.log(products.forEach((p) => console.log(Object.keys(p))));
-  console.log(products);
+  console.log("products",products);
   return (
     <>
       <div className="section bg-blue">

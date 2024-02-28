@@ -1,18 +1,18 @@
 import Link from "next/link";
 export default function PromoCard() {
-    return (
-      <section>
+  return (
+    <section>
+      <div>
         <div>
-          <div>
-            <h4>Get Instant Access</h4>
-            <p style = {{fontSize : '1rem' }}>
-              Subscribe to access this product as well as dozens of others
-            </p>
-          </div>
+          <h4>Get Instant Access</h4>
+          <p style={{ fontSize: '1rem' }}>
+            Subscribe to access this product as well as dozens of others
+          </p>
         </div>
-        <Link href = "/pricing" className= "primary button">  
-          Purchase
-        </Link>
-      </section>
-    );
+      </div>
+      <Link href="/pricing" className="primary button">
+        Purchase
+      </Link>
+    </section>
+  );
 }

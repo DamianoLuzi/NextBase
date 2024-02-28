@@ -49,10 +49,12 @@ export default async function handler(req, res) {
 
 async function updateSubscription(event) {
   const subscription = event.data.object;
-  const stripe_customer_id = subscription.customer;
-  const subscription_status = subscription.status;
+  console.log("update subcription",subscription)
+  const stripe_customer_id = subscription.customer;   //change to subscription.customer.id or subscription.stripe_customer_id ??
+  //const stripe_customer_id = subscription.customer.id
+  //const subscription_status = subscription.status;
   const price = subscription.items.data[0].price.id;
-
+  console.log("stripe customer id",subscription.customer)
   const {data: profile } = await supabase
     .from('profile')
     .select('*')
