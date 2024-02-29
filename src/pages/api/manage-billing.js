@@ -4,7 +4,6 @@ import {SITE_URL} from "../../core/utils/index";
 import { NextResponse } from "next/server";
 
 const handler = async (req, res) => {
-  
   const supabaseServerClient = createServerSupabaseClient({
     req,
     res
