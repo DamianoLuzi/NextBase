@@ -1,5 +1,6 @@
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useState } from "react";
+import { SITE_URL } from "../../core/utils";
 
 export default function LoginForm({ setSubmitted }) {
 	//supabase client is supplied by SessionContextProvider
@@ -16,7 +17,7 @@ export default function LoginForm({ setSubmitted }) {
 			email,
 			options: {
 				shouldCreateUser: false,
-				emailRedirectTo: window.location.origin
+				emailRedirectTo: SITE_URL //window.location.origin
 			}
 		});
 		if (error) {
