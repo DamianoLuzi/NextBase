@@ -23,6 +23,7 @@ export default async function handler(req, res) {
         //event = rawBody
         event = stripe.webhooks.constructEvent(rawBody,signature,signingSecret)
         console.log("raw body "+rawBody)
+        console.log("stripe webhooks event", event)
     } catch(error) {
         console.log("Webhook signature verification failed "+error)
         return res.status(400).end();
@@ -47,6 +48,8 @@ export default async function handler(req, res) {
   
 }
 
+//export default handler;
+
 
 async function updateSubscription(event) {
   const subscription = event.data.object;
@@ -56,7 +59,7 @@ async function updateSubscription(event) {
   logger.info("webhooks subcription.customer\n", subscription.customer);
   const stripe_customer_id = subscription.customer;   //change to subscription.customer.id or subscription.stripe_customer_id ??
   //const stripe_customer_id = subscription.customer.id
-  //const subscription_status = subscription.status;
+  const subscription_status = subscription.status;
   const price = subscription.items.data[0].price.id;
   console.log("stripe customer id",subscription.customer)
   const {data: profile } = await supabase
@@ -104,12 +107,18 @@ async function updateSubscription(event) {
     //the profile will be created using create_profile.sql function
     try {
         //instead of insert -> supabase.auth api
-        await supabase.auth.admin.createUser({
+        /* await supabase.auth.admin.createUser({
             email,
             email_confirm: true,
             user_metadata: newProfile
-        });
+        }); */
+        const {data , error} = await supabase
+            .from('profile')
+            .insert(newProfile)
         console.log("new profile added",newProfile)
+        logger.info("new profile added",newProfile);
+        console.log("new profile added insert",data)
+        logger.info("new profile added insert",data);
     }catch(error) {
         console.log("Supabase User Creation Error "+error.message)
     }

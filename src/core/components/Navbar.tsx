@@ -8,7 +8,7 @@ export default function Navbar() {
   //react hooks to access supabase auth token from the cookies
   const user = useUser(); //checking for specific user's data
   const session = useSession(); //checking if user is logged in
-  console.log({ user, session })
+  //console.log({ user, session })
   const supabaseClient = useSupabaseClient(); //calling supabase from the client
 
   const signOut = () => {

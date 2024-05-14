@@ -23,7 +23,7 @@ export async function getStaticProps() {
   const plans = []
   for (const price of prices) {
     //retreving the product plan name by its ID
-    console.log(price.product)
+    //console.log(price.product)
     const product = await stripe.products.retrieve(price.product.toString());  //added toString()
     plans.push({
       name: product.name,
