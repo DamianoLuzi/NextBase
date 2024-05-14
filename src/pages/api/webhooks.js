@@ -6,7 +6,7 @@
 import getRawBody from "raw-body" 
 import {stripe} from "../../pricing/utils/stripe"
 import {supabase} from "../../../supabase/index"
-const logger = require('./logger');
+const logger = require('../../logger');
 
 export const config = {
     api: {
