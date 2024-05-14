@@ -19,7 +19,8 @@
     "react-dom": "18.2.0",
     "react-player": "2.12.0",
     "sharp": "^0.32.6",
-    "stripe": "11.16.0"
+    "stripe": "11.16.0",
+    "winston": "^3.13.0"
   },
   "devDependencies": {
     "@types/react": "18.2.38",

@@ -6,6 +6,7 @@
 import getRawBody from "raw-body" 
 import {stripe} from "../../pricing/utils/stripe"
 import {supabase} from "../../../supabase/index"
+const logger = require('./logger');
 
 export const config = {
     api: {
@@ -50,6 +51,9 @@ export default async function handler(req, res) {
 async function updateSubscription(event) {
   const subscription = event.data.object;
   console.log("update subcription",subscription)
+  logger.info("update subscription", subscription);
+  console.log("webhooks subcription.customer\n", subscription.customer)
+  logger.info("webhooks subcription.customer\n", subscription.customer);
   const stripe_customer_id = subscription.customer;   //change to subscription.customer.id or subscription.stripe_customer_id ??
   //const stripe_customer_id = subscription.customer.id
   //const subscription_status = subscription.status;
@@ -77,6 +81,8 @@ async function updateSubscription(event) {
     const customer = await stripe.customers.retrieve(
         stripe_customer_id
     );
+    console.log(" stripe customer\n", customer)
+    logger.info(" stripe customer\n", customer);
     const name = customer.name;
     const email = customer.email;
     const newProfile = {
@@ -86,9 +92,11 @@ async function updateSubscription(event) {
         subscription_status,
         price
     }
+    
     console.log("new profile: "+
         newProfile.email+" "+
         newProfile.name+" "+
+        newProfile.stripe_customer_id+" "+
         newProfile.price+" "+
         newProfile.subscription_status)
     //using the auth api to authenticate the new profile
